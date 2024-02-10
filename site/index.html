@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+
+        .container {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 1em;
+            width: 800px;
+            height: 500px;
+            font-family: all 400ms;
+        }
+
+        .box {
+            position: relative;
+            background: var(--img) center center;
+            background-size: cover;
+            transition: all 400ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .box::after{
+            content: attr(data-text);
+            position:absolute;
+            bottom: 20px;
+            background: #000000;
+            color: #fff;
+            padding: 10px 10px 10px 14px;
+            text-transform: uppercase;
+            transform: translateY(60px);
+            opacity:0;
+            transition: all 400ms;
+        }
+
+        .container:hover .box {
+            filter: grayscale(100%) opacity(24%);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+        }
+
+        .box:hover::after{
+            transform: translateY(0);
+            opacity:1;
+            transition-delay: 400ms;
+        }
+
+        .container .box:hover {
+            filter: grayscale(0%) opacity(100%);
+        }
+
+        .container:has(.box-1:hover) {
+            grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+        }
+
+        .container:has(.box-2:hover) {
+            grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+        }
+
+        .container:has(.box-3:hover) {
+            grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+        }
+
+        .container:has(.box-4:hover) {
+            grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+        }
+
+        .container:has(.box-5:hover) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+        }
+
+        .box:nth-child(odd){
+            transform: translateY(-16px);
+        }
+
+        .box:nth-child(even){
+            transform: translateY(16px);
+        }
+
+        body{
+            background: #000000;
+        }
+
+
+        
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="box box-1" style="--img: url(./img/cecy.jpg);" data-text="Cecylion"></div>
+    <div class="box box-2" style="--img: url(./img/carmilla.jpg);" data-text="Carmilla"></div>
+    <div class="box box-3" style="--img: url(./img/packet.jpg);" data-text="Packito"></div>
+    <div class="box box-4" style="--img: url(./img/x.jpg);" data-text="Ixia"></div>
+    <div class="box box-5" style="--img: url(./img/xaya.jpg);" data-text="Haybusa"></div>
+
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
