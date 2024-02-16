@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 
 
     <style>
-
         @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 
         .container {
@@ -13,9 +13,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: 1em;
-            width: 800px;
+            width: 90%;
             height: 500px;
             font-family: all 400ms;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
         }
 
         .box {
@@ -29,16 +32,16 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
-        .box::after{
+        .box::after {
             content: attr(data-text);
-            position:absolute;
+            position: absolute;
             bottom: 20px;
             background: #000000;
             color: #fff;
             padding: 10px 10px 10px 14px;
             text-transform: uppercase;
             transform: translateY(60px);
-            opacity:0;
+            opacity: 0;
             transition: all 400ms;
         }
 
@@ -47,9 +50,9 @@
             box-shadow: 0 0 20px rgba(255, 0, 0, 1);
         }
 
-        .box:hover::after{
+        .box:hover::after {
             transform: translateY(0);
-            opacity:1;
+            opacity: 1;
             transition-delay: 400ms;
         }
 
@@ -77,39 +80,37 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
         }
 
-        .box:nth-child(odd){
+        .box:nth-child(odd) {
             transform: translateY(-16px);
         }
 
-        .box:nth-child(even){
+        .box:nth-child(even) {
             transform: translateY(16px);
         }
 
-        body{
+        body {
             background: #000000;
         }
-
-
-        
     </style>
 
 </head>
 
 <body>
-<div class="container">
-    <div class="box box-1" style="--img: url(./img/cecy.jpg);" data-text="Cecylion"></div>
-    <div class="box box-2" style="--img: url(./img/carmilla.jpg);" data-text="Carmilla"></div>
-    <div class="box box-3" style="--img: url(./img/packet.jpg);" data-text="Packito"></div>
-    <div class="box box-4" style="--img: url(./img/x.jpg);" data-text="Ixia"></div>
-    <div class="box box-5" style="--img: url(./img/xaya.jpg);" data-text="Haybusa"></div>
+    <div class="container">
+        <div class="box box-1" style="--img: url(./img/11.png);" data-text="Американская жесткошерстная кошка"></div>
+        <div class="box box-2" style="--img: url(./img/12.jpg);" data-text="Сноу-шу"></div>
+        <div class="box box-3" style="--img: url(./img/14.jpg);" data-text="Японский бобтейл короткошерстный"></div>
+        <div class="box box-4" style="--img: url(./img/15.jpg);" data-text="Лаперм"></div>
+        <div class="box box-5" style="--img: url(./img/16.jpg);" data-text="Русская голубая кошка"></div>
 
 
 
 
 
 
-</div>
+    </div>
 
 
 </body>
+
 </html>
